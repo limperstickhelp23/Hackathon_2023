@@ -13,41 +13,41 @@ integration of domain expertise at every step
 selection, training and tuning robust machine learning prediction models
 The model will be applied to support preventative maintenance by identifying ESPs within 30 days of failure for inspection and repair.
 
-###Available Data Files Inventory
+## Available Data Files Inventory
 
-#Well / ESP Data
+### Well / ESP Data
 wellData.csv - data on 166 unique ESPs installed on 146 wells. All ESPs not in the solution.csv are assumed to have failed.
 The features include:
 
-#AL_Bottom_Depth (ft) - the depth at which an ESP is positioned in the well
-ESP_Pump_Stages - the number of impellers that impart a pressure rise to the fluid
-DLS_Critical (degree/100ft) - critical dogleg severity; until a dog-leg reaches this threshold value, no drill stem fatigue damage occurs
-ESP_Motor_Frequency_Rating (Hz) - rated frequency of the motor
-ESP_Motor_Current_Rating (A) - rated current of the motor
-ESP_Motor_Voltage_Rating (V) - rated voltage of the motor
-DLS_at_Set_Depth (degree/100ft) - dogleg severity at the depth of the ESP
-Failure_Type - ESP failure type; can be "electrical", "pump", or "tubing"
-Failure_Type_Detail - detailed ESP failure type; can be "motor", "penetrator", "stage", etc
-Status - ESP status; can be either "failed", "active", or missing. Missing status indicates that an ESP is a test case
-Daily Data
+#### AL_Bottom_Depth (ft) - the depth at which an ESP is positioned in the well
+#### ESP_Pump_Stages - the number of impellers that impart a pressure rise to the fluid
+#### DLS_Critical (degree/100ft) - critical dogleg severity; until a dog-leg reaches this threshold value, no drill stem fatigue damage occurs
+#### ESP_Motor_Frequency_Rating (Hz) - rated frequency of the motor
+#### ESP_Motor_Current_Rating (A) - rated current of the motor
+#### ESP_Motor_Voltage_Rating (V) - rated voltage of the motor
+#### DLS_at_Set_Depth (degree/100ft) - dogleg severity at the depth of the ESP
+#### Failure_Type - ESP failure type; can be "electrical", "pump", or "tubing"
+#### Failure_Type_Detail - detailed ESP failure type; can be "motor", "penetrator", "stage", etc
+#### Status - ESP status; can be either "failed", "active", or missing. Missing status indicates that an ESP is a test case
+### Daily Data
 dailyData.csv - dynamic data collected daily. For each well, there will be a row of data for each day that the ESP is installed.
 The features include:
 
-OIL (bbl) - oil production
-GAS (SCF) - gas production
-WATER (bbl) - water production
-DOWN_TIME_HOURS - the amount of time the well was shut for per day
-Oil_Intake (bbl) - the amount of oil that enters the system
-Water_Intake (bbl) - the amount of water that enters the system
-Gas_Intake (SCF) - the amount of gas that enters the system
-Liquid_Intake (bbl) - the amount of liquid that enters the system
-Gas_Saturation_at_Intake - ratio of the amount of gas entering the system to the total volume
-Gas_Saturation_at_Discharge - ratio of the amount of gas leaving the system to the total volume
-Gas_Separator_Efficiency - ratio of the reduced volume of free gas to the volume before entering the separator
-Pump_Delta_Pressure (psi) - the difference between discharge and intake pressure
-Power_Ratio - ratio of pump power to drive power
-Power_Difference (psi) - the difference between drive and pump power
-Problem Set
+#### OIL (bbl) - oil production
+#### GAS (SCF) - gas production
+#### WATER (bbl) - water production
+#### DOWN_TIME_HOURS - the amount of time the well was shut for per day
+#### Oil_Intake (bbl) - the amount of oil that enters the system
+#### Water_Intake (bbl) - the amount of water that enters the system
+#### Gas_Intake (SCF) - the amount of gas that enters the system
+#### Liquid_Intake (bbl) - the amount of liquid that enters the system
+#### Gas_Saturation_at_Intake - ratio of the amount of gas entering the system to the total volume
+#### Gas_Saturation_at_Discharge - ratio of the amount of gas leaving the system to the total volume
+#### Gas_Separator_Efficiency - ratio of the reduced volume of free gas to the volume before entering the separator
+#### Pump_Delta_Pressure (psi) - the difference between discharge and intake pressure
+#### Power_Ratio - ratio of pump power to drive power
+#### Power_Difference (psi) - the difference between drive and pump power
+### Problem Set
 solution.csv - a list of the ESPs to be predicted if they will fail in 30 days. Note, these ESPs in the daily data have not failed yet.
 The features include:
 
