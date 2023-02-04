@@ -13,13 +13,13 @@ integration of domain expertise at every step
 selection, training and tuning robust machine learning prediction models
 The model will be applied to support preventative maintenance by identifying ESPs within 30 days of failure for inspection and repair.
 
-Available Data Files Inventory
+#Available Data Files Inventory
 
-Well / ESP Data
+#Well / ESP Data
 wellData.csv - data on 166 unique ESPs installed on 146 wells. All ESPs not in the solution.csv are assumed to have failed.
 The features include:
 
-AL_Bottom_Depth (ft) - the depth at which an ESP is positioned in the well
+#AL_Bottom_Depth (ft) - the depth at which an ESP is positioned in the well
 ESP_Pump_Stages - the number of impellers that impart a pressure rise to the fluid
 DLS_Critical (degree/100ft) - critical dogleg severity; until a dog-leg reaches this threshold value, no drill stem fatigue damage occurs
 ESP_Motor_Frequency_Rating (Hz) - rated frequency of the motor
